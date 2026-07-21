@@ -1,0 +1,41 @@
+# Requirements for the CO2-to-Syngas modelling code
+# Conda environment: Masterarbescht  (Python 3.11.14)
+#
+# Recommended install (conda, gets IPOPT binaries via idaes-pse):
+#   conda create -n Masterarbescht python=3.11
+#   conda activate Masterarbescht
+#   pip install -r requirements.txt
+#   idaes get-extensions          # installs the IPOPT solver binaries
+#
+# Note: matlabengine must match your local MATLAB release (R2024b -> 24.2.x)
+#       and is only needed for the MATLAB interface (CO2MatlabInterface branch).
+
+# --- Optimisation core ---
+Pyomo==6.9.5
+idaes-pse==2.10.0            # provides the IPOPT solver binaries (idaes get-extensions)
+
+# --- Scientific stack ---
+numpy==2.0.1
+scipy==1.17.1
+pandas==2.3.3
+scikit-learn==1.8.0
+statsmodels==0.14.6
+sympy==1.14.0
+Pint==0.25.2
+
+# --- Surrogate modelling (SurrogateModeling/) ---
+pysr==1.5.9                 # symbolic regression (pulls in juliacall/juliapkg)
+
+# --- Plotting & reporting ---
+matplotlib==3.10.7
+seaborn==0.13.2
+prettytable==3.16.0
+openpyxl==3.1.5
+XlsxWriter==3.2.9
+
+# --- Testing ---
+pytest==8.4.2
+
+# --- Document / MATLAB interfaces (optional) ---
+PyMuPDF==1.27.2.2           # PDF handling
+matlabengine==24.2.2        # MATLAB engine for Python (match your MATLAB release)

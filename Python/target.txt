@@ -1,0 +1,8 @@
+Target 40 tonnes/day syngas
+ratio H2/CO = 2
+MW_syngas = syngas_ratio * MW_H2 + MW_CO) / (syngas_ratio + 1))  # in kg/mol = 0,01681
+Target 3756084 mol syngas per day = 43,34 mol/s
+target CO: 14,45 mol/s
+for 75t syngas: 27,09
+
+I have resorted to targeting 75t a day, amine wash surrogate only works for 75t

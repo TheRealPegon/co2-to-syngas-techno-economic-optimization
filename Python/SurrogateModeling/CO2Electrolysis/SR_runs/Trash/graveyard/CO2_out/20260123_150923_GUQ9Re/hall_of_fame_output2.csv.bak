@@ -1,0 +1,12 @@
+Complexity,Loss,Equation
+1,0.24810672,"0.2378437"
+3,0.15095894,"-0.70843446 - E_appl"
+5,0.08677211,"square(cube(E_appl) / 2.2872705)"
+6,0.0731041,"square(square(cube(E_appl) / 2.1662447))"
+10,0.065937646,"cube(((square(E_appl) - exp(v)) + 0.30077064) + v)"
+12,0.06563817,"cube((v + 0.3076824) + (square(E_appl) - exp(v))) - v"
+13,0.05690398,"(CO2share * square((cube(E_appl) / 1.6550443) - (v / 1.026184))) - 0.10810333"
+14,0.03890574,"square(cube(square(cbrt((0.13191716 / CO2share) + E_appl) * cbrt(E_appl * -0.7306139))))"
+19,0.030279664,"sqrt(square(cube(((1.9867725 + E_appl) - (E_appl * log(0.27537522))) + v) * (E_appl * (E_appl * CO2share))))"
+20,0.018181685,"square(sqrt(v) - ((0.24929361 - square(square(E_appl * ((0.2961365 - cbrt(v)) + 0.70720714)) * E_appl)) * CO2share))"
+25,0.003287347,"square((-0.11974252 - ((square(square(sqrt(sqrt((0.35763964 - cbrt(v)) + 0.16367003)) * E_appl) * E_appl) * CO2share) - sqrt(v))) / sqrt(CO2share))"

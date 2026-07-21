@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where pytest:*)",
+      "Bash(python -c \"import sys; print\\(sys.executable\\)\")",
+      "Read(//c/Users/Philippe/Documents/UniCours/Master/Masterarbescht/PSA_investigation/**)"
+    ]
+  }
+}

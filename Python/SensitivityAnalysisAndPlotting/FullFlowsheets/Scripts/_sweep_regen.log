@@ -1,0 +1,463 @@
+
+############################################################
+  SWEEP: CO₂ feed price [€/t CO₂]
+############################################################
+
+[Building PSA base-case reference for warm-starting]
+
+=== Building PSAFlowsheet ===
+  -> PSA flowsheet: SOLVED
+
+============================================================
+  CO₂ feed price [€/t CO₂] = 0.0
+============================================================
+
+=== Building MembraneFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Membrane flowsheet: SOLVED
+  -> PSA flowsheet: SOLVED (warm-started from base case)
+
+=== Building AmineWashFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Amine flowsheet: SOLVED
+
+======================================================================
+  FLOWSHEET COMPARISON  —  target 75 t/day syngas,  H2: H2Electrolyzer
+======================================================================
++--------------------------------+----------+----------+----------+
+| Metric                         | Membrane |      PSA |    Amine |
++--------------------------------+----------+----------+----------+
+| Syngas output [t/day]          |       75 |       75 |       75 |
+| Fresh CO₂ feed [t/day]         |      242 |      284 |      228 |
+| CO₂ feed / syngas ratio [-]    |     3.23 |     3.79 |     3.04 |
+| CAPEX [M€]                     |      252 |      250 |      257 |
+| OPEX [M€/yr]                   | 5.59e+05 | 6.13e+05 | 6.28e+05 |
+| Lifecycle cost [M€]            |      855 |      912 |      935 |
+| CO₂ electrolyzer power [MW]    |     60.5 |       71 |     67.4 |
+| H₂ electrolyzer power [MW]     |     22.8 |     22.2 |     22.2 |
+| Compression/sep. power [MW]    |     2.72 |     2.13 |        0 |
+| Amine reboiler heat [GJ/tCO₂]  |        — |        — |     3.54 |
+| Amine elec. penalty [kWh/tCO₂] |        — |        — |     1.31 |
++--------------------------------+----------+----------+----------+
+
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\0\comparison_costs.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\0\comparison_energy.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\0\comparison_process.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\0\comparison_capex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\0\comparison_opex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\0\comparison_lifecycle_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\0\comparison_lifecycle_breakdown.csv
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\0\comparison_production_cost.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\0\operating_points.csv
+
+============================================================
+  CO₂ feed price [€/t CO₂] = 22.0
+============================================================
+
+=== Building MembraneFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Membrane flowsheet: SOLVED
+  -> PSA flowsheet: SOLVED (warm-started from base case)
+
+=== Building AmineWashFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Amine flowsheet: SOLVED
+
+======================================================================
+  FLOWSHEET COMPARISON  —  target 75 t/day syngas,  H2: H2Electrolyzer
+======================================================================
++--------------------------------+----------+----------+----------+
+| Metric                         | Membrane |      PSA |    Amine |
++--------------------------------+----------+----------+----------+
+| Syngas output [t/day]          |       75 |       75 |       75 |
+| Fresh CO₂ feed [t/day]         |      242 |      281 |      227 |
+| CO₂ feed / syngas ratio [-]    |     3.23 |     3.75 |     3.02 |
+| CAPEX [M€]                     |      252 |      249 |      257 |
+| OPEX [M€/yr]                   | 5.75e+05 | 6.33e+05 | 6.43e+05 |
+| Lifecycle cost [M€]            |      873 |      933 |      952 |
+| CO₂ electrolyzer power [MW]    |     60.5 |     71.3 |     67.5 |
+| H₂ electrolyzer power [MW]     |     22.8 |     22.2 |     22.2 |
+| Compression/sep. power [MW]    |     2.72 |     2.04 |        0 |
+| Amine reboiler heat [GJ/tCO₂]  |        — |        — |     3.54 |
+| Amine elec. penalty [kWh/tCO₂] |        — |        — |     1.32 |
++--------------------------------+----------+----------+----------+
+
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\22\comparison_costs.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\22\comparison_energy.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\22\comparison_process.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\22\comparison_capex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\22\comparison_opex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\22\comparison_lifecycle_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\22\comparison_lifecycle_breakdown.csv
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\22\comparison_production_cost.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\22\operating_points.csv
+
+============================================================
+  CO₂ feed price [€/t CO₂] = 44.0
+============================================================
+
+=== Building MembraneFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Membrane flowsheet: SOLVED
+  -> PSA flowsheet: SOLVED (warm-started from base case)
+
+=== Building AmineWashFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Amine flowsheet: SOLVED
+
+======================================================================
+  FLOWSHEET COMPARISON  —  target 75 t/day syngas,  H2: H2Electrolyzer
+======================================================================
++--------------------------------+----------+----------+----------+
+| Metric                         | Membrane |      PSA |    Amine |
++--------------------------------+----------+----------+----------+
+| Syngas output [t/day]          |       75 |       75 |       75 |
+| Fresh CO₂ feed [t/day]         |      242 |      278 |      226 |
+| CO₂ feed / syngas ratio [-]    |     3.22 |     3.71 |     3.01 |
+| CAPEX [M€]                     |      252 |      249 |      257 |
+| OPEX [M€/yr]                   | 5.91e+05 | 6.52e+05 | 6.58e+05 |
+| Lifecycle cost [M€]            |      890 |      953 |      968 |
+| CO₂ electrolyzer power [MW]    |     60.5 |     71.5 |     67.7 |
+| H₂ electrolyzer power [MW]     |     22.8 |     22.2 |     22.2 |
+| Compression/sep. power [MW]    |     2.71 |     1.96 |        0 |
+| Amine reboiler heat [GJ/tCO₂]  |        — |        — |     3.54 |
+| Amine elec. penalty [kWh/tCO₂] |        — |        — |     1.33 |
++--------------------------------+----------+----------+----------+
+
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\44\comparison_costs.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\44\comparison_energy.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\44\comparison_process.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\44\comparison_capex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\44\comparison_opex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\44\comparison_lifecycle_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\44\comparison_lifecycle_breakdown.csv
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\44\comparison_production_cost.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\44\operating_points.csv
+Summary plot saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\summary_total_opex.png
+Summary plot saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\summary_current_density.png
+Summary plot saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_CO2_feed\summary_production_cost.png
+
+############################################################
+  SWEEP: Electricity price [€/kWh]
+############################################################
+
+============================================================
+  Electricity price [€/kWh] = 0.04
+============================================================
+
+=== Building MembraneFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Membrane flowsheet: SOLVED
+  -> PSA flowsheet: SOLVED (warm-started from base case)
+
+=== Building AmineWashFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Amine flowsheet: SOLVED
+
+======================================================================
+  FLOWSHEET COMPARISON  —  target 75 t/day syngas,  H2: H2Electrolyzer
+======================================================================
++--------------------------------+----------+----------+----------+
+| Metric                         | Membrane |      PSA |    Amine |
++--------------------------------+----------+----------+----------+
+| Syngas output [t/day]          |       75 |       75 |       75 |
+| Fresh CO₂ feed [t/day]         |      246 |      275 |      227 |
+| CO₂ feed / syngas ratio [-]    |     3.28 |     3.66 |     3.02 |
+| CAPEX [M€]                     |      224 |      222 |      235 |
+| OPEX [M€/yr]                   | 3.37e+05 | 3.67e+05 | 3.85e+05 |
+| Lifecycle cost [M€]            |      589 |      618 |      651 |
+| CO₂ electrolyzer power [MW]    |     68.4 |     80.2 |     76.5 |
+| H₂ electrolyzer power [MW]     |     22.6 |     21.9 |     21.9 |
+| Compression/sep. power [MW]    |     2.68 |     1.51 |        0 |
+| Amine reboiler heat [GJ/tCO₂]  |        — |        — |     3.54 |
+| Amine elec. penalty [kWh/tCO₂] |        — |        — |     1.46 |
++--------------------------------+----------+----------+----------+
+
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_04\comparison_costs.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_04\comparison_energy.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_04\comparison_process.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_04\comparison_capex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_04\comparison_opex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_04\comparison_lifecycle_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_04\comparison_lifecycle_breakdown.csv
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_04\comparison_production_cost.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_04\operating_points.csv
+
+============================================================
+  Electricity price [€/kWh] = 0.08
+============================================================
+
+=== Building MembraneFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Membrane flowsheet: SOLVED
+  -> PSA flowsheet: SOLVED (warm-started from base case)
+
+=== Building AmineWashFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Amine flowsheet: SOLVED
+
+======================================================================
+  FLOWSHEET COMPARISON  —  target 75 t/day syngas,  H2: H2Electrolyzer
+======================================================================
++--------------------------------+----------+----------+----------+
+| Metric                         | Membrane |      PSA |    Amine |
++--------------------------------+----------+----------+----------+
+| Syngas output [t/day]          |       75 |       75 |       75 |
+| Fresh CO₂ feed [t/day]         |      242 |      281 |      227 |
+| CO₂ feed / syngas ratio [-]    |     3.23 |     3.75 |     3.02 |
+| CAPEX [M€]                     |      252 |      249 |      257 |
+| OPEX [M€/yr]                   | 5.75e+05 | 6.33e+05 | 6.43e+05 |
+| Lifecycle cost [M€]            |      873 |      933 |      952 |
+| CO₂ electrolyzer power [MW]    |     60.5 |     71.3 |     67.5 |
+| H₂ electrolyzer power [MW]     |     22.8 |     22.2 |     22.2 |
+| Compression/sep. power [MW]    |     2.72 |     2.04 |        0 |
+| Amine reboiler heat [GJ/tCO₂]  |        — |        — |     3.54 |
+| Amine elec. penalty [kWh/tCO₂] |        — |        — |     1.32 |
++--------------------------------+----------+----------+----------+
+
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_08\comparison_costs.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_08\comparison_energy.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_08\comparison_process.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_08\comparison_capex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_08\comparison_opex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_08\comparison_lifecycle_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_08\comparison_lifecycle_breakdown.csv
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_08\comparison_production_cost.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_08\operating_points.csv
+
+============================================================
+  Electricity price [€/kWh] = 0.12
+============================================================
+
+=== Building MembraneFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Membrane flowsheet: SOLVED
+  -> PSA flowsheet: SOLVED (warm-started from base case)
+
+=== Building AmineWashFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Amine flowsheet: SOLVED
+
+======================================================================
+  FLOWSHEET COMPARISON  —  target 75 t/day syngas,  H2: H2Electrolyzer
+======================================================================
++--------------------------------+----------+----------+----------+
+| Metric                         | Membrane |      PSA |    Amine |
++--------------------------------+----------+----------+----------+
+| Syngas output [t/day]          |       75 |       75 |       75 |
+| Fresh CO₂ feed [t/day]         |      242 |      287 |      234 |
+| CO₂ feed / syngas ratio [-]    |     3.23 |     3.83 |     3.12 |
+| CAPEX [M€]                     |      274 |      271 |      276 |
+| OPEX [M€/yr]                   | 8.01e+05 | 8.88e+05 |  8.8e+05 |
+| Lifecycle cost [M€]            | 1.14e+03 | 1.23e+03 | 1.23e+03 |
+| CO₂ electrolyzer power [MW]    |     56.7 |     67.2 |     61.6 |
+| H₂ electrolyzer power [MW]     |     22.9 |     22.3 |     22.4 |
+| Compression/sep. power [MW]    |     2.73 |      2.4 |        0 |
+| Amine reboiler heat [GJ/tCO₂]  |        — |        — |     3.53 |
+| Amine elec. penalty [kWh/tCO₂] |        — |        — |      1.2 |
++--------------------------------+----------+----------+----------+
+
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_12\comparison_costs.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_12\comparison_energy.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_12\comparison_process.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_12\comparison_capex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_12\comparison_opex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_12\comparison_lifecycle_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_12\comparison_lifecycle_breakdown.csv
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_12\comparison_production_cost.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\0_12\operating_points.csv
+Summary plot saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\summary_total_opex.png
+Summary plot saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\summary_current_density.png
+Summary plot saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_price_power\summary_production_cost.png
+
+############################################################
+  SWEEP: CO₂ electrolyzer cost [€/m²]
+############################################################
+
+============================================================
+  CO₂ electrolyzer cost [€/m²] = 3269.0
+============================================================
+
+=== Building MembraneFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Membrane flowsheet: SOLVED
+  -> PSA flowsheet: SOLVED (warm-started from base case)
+
+=== Building AmineWashFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Amine flowsheet: SOLVED
+
+======================================================================
+  FLOWSHEET COMPARISON  —  target 75 t/day syngas,  H2: H2Electrolyzer
+======================================================================
++--------------------------------+----------+----------+----------+
+| Metric                         | Membrane |      PSA |    Amine |
++--------------------------------+----------+----------+----------+
+| Syngas output [t/day]          |       75 |       75 |       75 |
+| Fresh CO₂ feed [t/day]         |      241 |      280 |      223 |
+| CO₂ feed / syngas ratio [-]    |     3.21 |     3.74 |     2.98 |
+| CAPEX [M€]                     |      223 |      217 |      227 |
+| OPEX [M€/yr]                   |  5.5e+05 | 6.09e+05 | 6.25e+05 |
+| Lifecycle cost [M€]            |      817 |      875 |      903 |
+| CO₂ electrolyzer power [MW]    |     57.5 |     68.5 |     65.8 |
+| H₂ electrolyzer power [MW]     |     22.9 |     22.3 |     22.3 |
+| Compression/sep. power [MW]    |     2.74 |     2.14 |        0 |
+| Amine reboiler heat [GJ/tCO₂]  |        — |        — |     3.54 |
+| Amine elec. penalty [kWh/tCO₂] |        — |        — |     1.32 |
++--------------------------------+----------+----------+----------+
+
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\3269\comparison_costs.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\3269\comparison_energy.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\3269\comparison_process.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\3269\comparison_capex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\3269\comparison_opex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\3269\comparison_lifecycle_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\3269\comparison_lifecycle_breakdown.csv
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\3269\comparison_production_cost.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\3269\operating_points.csv
+
+============================================================
+  CO₂ electrolyzer cost [€/m²] = 4670.0
+============================================================
+
+=== Building MembraneFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Membrane flowsheet: SOLVED
+  -> PSA flowsheet: SOLVED (warm-started from base case)
+
+=== Building AmineWashFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Amine flowsheet: SOLVED
+
+======================================================================
+  FLOWSHEET COMPARISON  —  target 75 t/day syngas,  H2: H2Electrolyzer
+======================================================================
++--------------------------------+----------+----------+----------+
+| Metric                         | Membrane |      PSA |    Amine |
++--------------------------------+----------+----------+----------+
+| Syngas output [t/day]          |       75 |       75 |       75 |
+| Fresh CO₂ feed [t/day]         |      242 |      281 |      227 |
+| CO₂ feed / syngas ratio [-]    |     3.23 |     3.75 |     3.02 |
+| CAPEX [M€]                     |      252 |      249 |      257 |
+| OPEX [M€/yr]                   | 5.75e+05 | 6.33e+05 | 6.43e+05 |
+| Lifecycle cost [M€]            |      873 |      933 |      952 |
+| CO₂ electrolyzer power [MW]    |     60.5 |     71.3 |     67.5 |
+| H₂ electrolyzer power [MW]     |     22.8 |     22.2 |     22.2 |
+| Compression/sep. power [MW]    |     2.72 |     2.04 |        0 |
+| Amine reboiler heat [GJ/tCO₂]  |        — |        — |     3.54 |
+| Amine elec. penalty [kWh/tCO₂] |        — |        — |     1.32 |
++--------------------------------+----------+----------+----------+
+
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\4670\comparison_costs.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\4670\comparison_energy.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\4670\comparison_process.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\4670\comparison_capex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\4670\comparison_opex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\4670\comparison_lifecycle_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\4670\comparison_lifecycle_breakdown.csv
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\4670\comparison_production_cost.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\4670\operating_points.csv
+
+============================================================
+  CO₂ electrolyzer cost [€/m²] = 6071.0
+============================================================
+
+=== Building MembraneFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Membrane flowsheet: SOLVED
+  -> PSA flowsheet: SOLVED (warm-started from base case)
+
+=== Building AmineWashFlowsheet ===
+  [homotopy 40 t/day] -> optimal
+  [homotopy 55 t/day] -> optimal
+  [homotopy 65 t/day] -> optimal
+  [homotopy 75 t/day] -> optimal
+  -> Amine flowsheet: SOLVED
+
+======================================================================
+  FLOWSHEET COMPARISON  —  target 75 t/day syngas,  H2: H2Electrolyzer
+======================================================================
++--------------------------------+----------+----------+---------+
+| Metric                         | Membrane |      PSA |   Amine |
++--------------------------------+----------+----------+---------+
+| Syngas output [t/day]          |       75 |       75 |      75 |
+| Fresh CO₂ feed [t/day]         |      244 |      283 |     230 |
+| CO₂ feed / syngas ratio [-]    |     3.25 |     3.77 |    3.07 |
+| CAPEX [M€]                     |      279 |      280 |     284 |
+| OPEX [M€/yr]                   | 5.97e+05 | 6.54e+05 | 6.6e+05 |
+| Lifecycle cost [M€]            |      924 |      987 |     997 |
+| CO₂ electrolyzer power [MW]    |       63 |     73.6 |      69 |
+| H₂ electrolyzer power [MW]     |     22.7 |     22.1 |    22.2 |
+| Compression/sep. power [MW]    |     2.71 |     1.99 |       0 |
+| Amine reboiler heat [GJ/tCO₂]  |        — |        — |    3.54 |
+| Amine elec. penalty [kWh/tCO₂] |        — |        — |    1.32 |
++--------------------------------+----------+----------+---------+
+
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\6071\comparison_costs.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\6071\comparison_energy.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\6071\comparison_process.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\6071\comparison_capex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\6071\comparison_opex_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\6071\comparison_lifecycle_breakdown.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\6071\comparison_lifecycle_breakdown.csv
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\6071\comparison_production_cost.png
+Saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\6071\operating_points.csv
+Summary plot saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\summary_total_opex.png
+Summary plot saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\summary_current_density.png
+Summary plot saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_base_cost_elec\summary_production_cost.png
+
+Combined sensitivity CSV saved: C:\Users\Philippe\Documents\UniCours\Master\Masterarbescht\MasterCode\master-thesis-orlewski\Python\SensitivityAnalysisAndPlotting\FullFlowsheets\Plots\sensitivity_production_costs.csv
+
+All sweeps complete.
+
