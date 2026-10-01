@@ -1,24 +1,70 @@
-# CO₂-to-Syngas Process Modelling & Techno-Economic Optimisation
+# CO₂-to-Syngas: Process Modelling & Techno-Economic Optimisation
 
-Master's thesis code (P. Orlewski). This repository contains Pyomo-based
-techno-economic optimisation models for producing syngas (H₂ + CO, target
-H₂/CO = 2) from a **CO₂ electrolyzer** coupled with one of three downstream
-CO₂/CO separation technologies:
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Python 3.11](https://img.shields.io/badge/python-3.11-blue)
+![Pyomo + IPOPT](https://img.shields.io/badge/Pyomo-IPOPT-green)
+
+Master's thesis code: *Techno-Economic Optimization of CO₂ Electrolysis and
+Separation Systems for Syngas Production*. Philippe Orlewski, M.Sc.
+Computational Engineering Science, RWTH Aachen University (AVT.SVT), 2026.
+Thesis grade 1.1.
+
+**What it does:** syngas (H₂ + CO, H₂/CO = 2, 75 t/day) is produced from a
+**CO₂ electrolyzer** coupled with one of three downstream CO₂/CO separation
+technologies. Each combination is built as a closed-loop flowsheet
+(electrolyzer + separation + CO₂/CO recycle) in **Pyomo**. Each flowsheet is
+solved as one nonlinear optimisation problem that minimises total lifecycle
+cost (CAPEX + OPEX) with IPOPT. The flowsheets are then compared and
+stress-tested with a sensitivity analysis.
 
 - **Amine wash** (MEA chemical absorption)
-- **PSA** (Pressure Swing Adsorption, virtual moving bed abstraction)
-- **Gas permeation membrane** (with optional multi-stage compression)
+- **PSA** (pressure swing adsorption, virtual moving bed abstraction)
+- **Gas permeation membrane** (discretised solution-diffusion model, optional multi-stage compression)
 
-Each technology is assembled into a closed-loop flowsheet (electrolyzer +
-separation + CO₂/CO recycle) and solved as a single nonlinear optimisation
-problem that minimises total lifecycle cost (CAPEX + plant-life × OPEX).
-The three flowsheets are then compared and subjected to sensitivity analysis.
+The electrolyzer enters the optimisation as a **fast surrogate**: a mechanistic
+2D channel model (MATLAB) is sampled with Latin-hypercube designs. Symbolic
+regression (PySR) and Gaussian-process surrogates are fitted to those samples
+and embedded in the Pyomo flowsheets.
 
-The work has two parts:
+## Key results (base case)
 
-- **`Matlab/`** — the mechanistic 2D channel electrolyzer model (M3, after
+| Flowsheet | Lifecycle cost [M€] | Syngas production cost [€/t] |
+|-----------|--------------------:|-----------------------------:|
+| **Membrane** | **840** | **≈ 1,530** |
+| PSA | 893 | ≈ 1,630 |
+| Amine wash | 914 | ≈ 1,670 |
+
+These numbers come from the parameter set in `Python/configuration.py`
+(electricity 0.08 €/kWh, CO₂ feed 22 €/t, CO₂ electrolyzer 4,670 €/m²).
+
+- The **membrane** flowsheet is cheapest in the base case. It stays cheapest
+  across every sensitivity sweep run: electricity price ±50 %, electrolyzer
+  area cost ±50 %, CO₂ feed price 0–44 €/t.
+- **Electricity dominates** the cost. CO₂-electrolyzer power alone is the
+  largest single lifecycle cost item in all three flowsheets. Varying the
+  electricity price by ±50 % moves the production cost by roughly
+  ±30 %, far more than any other parameter.
+- The amine wash has the lowest electrolyzer CAPEX, but the highest
+  separation CAPEX and OPEX.
+
+<p align="center">
+  <img src="Python/SensitivityAnalysisAndPlotting/FullFlowsheets/Plots/flowsheet_comparison/comparison_lifecycle_breakdown.png" width="49%" alt="Lifecycle cost breakdown per flowsheet">
+  <img src="Python/SensitivityAnalysisAndPlotting/FullFlowsheets/Plots/sensitivity_tornado.png" width="49%" alt="Sensitivity of syngas production cost">
+</p>
+
+The full written thesis is included: [`2026_MA_thesis_Orlewsk_signed.pdf`](2026_MA_thesis_Orlewsk_signed.pdf).
+
+## Methods & tools
+
+Python · Pyomo · IPOPT (via IDAES) · multistart NLP · PySR symbolic regression ·
+Gaussian processes · scikit-learn · MATLAB (`bvp4c`, method of lines) ·
+Latin-hypercube sampling · pytest
+
+## Two parts
+
+- **`Matlab/`**: the mechanistic 2D channel electrolyzer model (M3, after
   Baghemihl) that generates the electrolyzer training data.
-- **`Python/`** — fits a fast surrogate to that data and runs the Pyomo
+- **`Python/`**: fits a fast surrogate to that data and runs the Pyomo
   techno-economic flowsheet optimisation and sensitivity analysis.
 
 Data flow: `Matlab/` samples the mechanistic model → CSV datasets →
@@ -54,7 +100,7 @@ directory to `sys.path` — run them from within the `Python/` directory.
 ## Repository structure
 
 ```
-master-thesis-orlewski/
+co2-to-syngas-techno-economic-optimization/
 ├── README.md                        # This file
 ├── 2026_MA_thesis_Orlewsk_signed.pdf   # Full written thesis
 ├── .gitignore
@@ -173,7 +219,7 @@ All commands below are run from the `Python/` directory (`cd Python` first).
 ```bash
 pytest unit_tests
 ```
-(some of them might not convergge anymore at their given operating havent used those in a while)
+(Some tests may no longer converge at their stored operating points; they have not been re-run recently.)
 
 **Compare the three flowsheets:**
 ```bash
@@ -203,3 +249,9 @@ Configure the `SWEEP` block at the top; results land in
   part of the active pipeline.
 - `__pycache__/`, `.pytest_cache/`, and generated `Plots/` folders are build
   artefacts, not source.
+
+---
+
+## License
+
+MIT for the author’s own code (see [`LICENSE`](LICENSE)). The mechanistic channel model in `Matlab/channelmodel_full_Ag_Python.m` (M3, after Baghemihl) is credited to its original authors.
