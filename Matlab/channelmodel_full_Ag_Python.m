@@ -1,3 +1,10 @@
+% ------------------------------------------------------------------------
+% M3 full channel model by I. Bagemihl et al. (TU Delft). Original work:
+% Bagemihl, Cammann, Perez-Fortes, van Steijn, van Ommen, ACS Sustainable
+% Chem. Eng. 11(27), 10130-10141 (2023), doi:10.1021/acssuschemeng.3c02226.
+% Used for surrogate data generation in P. Orlewski's M.Sc. thesis (RWTH, 2026).
+% All rights to the original model remain with its authors.
+% ------------------------------------------------------------------------
 function [X,FE,y,delP,CD, oldsol] = channelmodel_full_Ag_Python(E_appl,L,v,vL,c_int,k,Henry,BV,const,H,W,y0,por,D,H_c,a, solver)
 %% Flowchannel-CatalystLayer-BoundaryLayer
 % This file shows a running example of the full channel model (M3).

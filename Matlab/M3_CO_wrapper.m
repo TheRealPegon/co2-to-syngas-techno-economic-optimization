@@ -17,7 +17,7 @@ function [results] = M3_CO_wrapper(E_appl, initial_concentration)
     
     %% Post Processing
 
-    %calculate actual Voltage adapted from Baghemihl PhD Dissertation,
+    %calculate actual Voltage adapted from Bagemihl PhD Dissertation,
     %Section 4.E
     eta.actA    = const.R*const.T/(0.5*const.F)*asinh(CD/(2*1e-7)); %eq 4.54
     eta.ohm     = CD*(Channel_H/sigma_el+Lm/sigma_m); %eq 4.55

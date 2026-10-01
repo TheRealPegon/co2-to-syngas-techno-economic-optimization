@@ -9,7 +9,7 @@ clear
 %temperature 25 degrees
 %electrolyte flow 1ml/min. Maybe vary this as input?
 %gas flow 15ml/min. Maybe vary this as input?
-%Other geometries as in original Baghemihl paper
+%Other geometries as in original Bagemihl paper
 
 
 %500 datapoints on Ryzen 5800X take about 3 hours per worker

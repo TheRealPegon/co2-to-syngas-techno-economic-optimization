@@ -70,7 +70,7 @@ function [data, maxRes] = try_catch_block(data, i, filename, E_appl, CO2share, t
         X = X_tmp; FE = FE_tmp; y = y_tmp; delP = delP_tmp; CD = CD_tmp;
 
         %% Post Processing
-        %calculate actual Voltage adapted from Baghemihl PhD Dissertation,
+        %calculate actual Voltage adapted from Bagemihl PhD Dissertation,
         %Section 4.E
         eta_actA    = const.R*const.T/(0.5*const.F)*asinh(CD/(2*1e-7)); %eq 4.54
         eta_ohm     = CD*(Channel_H/sigma_el+Lm/sigma_m); %eq 4.55

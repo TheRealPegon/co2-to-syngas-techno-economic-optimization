@@ -21,8 +21,9 @@ stress-tested with a sensitivity analysis.
 - **PSA** (pressure swing adsorption, virtual moving bed abstraction)
 - **Gas permeation membrane** (discretised solution-diffusion model, optional multi-stage compression)
 
-The electrolyzer enters the optimisation as a **fast surrogate**: a mechanistic
-2D channel model (MATLAB) is sampled with Latin-hypercube designs. Symbolic
+The electrolyzer enters the optimisation as a **fast surrogate**: the mechanistic
+M3 full channel model of [Bagemihl et al. (2023)](https://doi.org/10.1021/acssuschemeng.3c02226)
+(MATLAB) is sampled with Latin-hypercube designs. Symbolic
 regression (PySR) and Gaussian-process surrogates are fitted to those samples
 and embedded in the Pyomo flowsheets.
 
@@ -62,8 +63,8 @@ Latin-hypercube sampling · pytest
 
 ## Two parts
 
-- **`Matlab/`**: the mechanistic 2D channel electrolyzer model (M3, after
-  Baghemihl) that generates the electrolyzer training data.
+- **`Matlab/`**: the mechanistic 2D channel electrolyzer model (M3, by
+  Bagemihl et al. 2023, see [Credits](#credits)) that generates the electrolyzer training data.
 - **`Python/`**: fits a fast surrogate to that data and runs the Pyomo
   techno-economic flowsheet optimisation and sensitivity analysis.
 
@@ -106,7 +107,7 @@ co2-to-syngas-techno-economic-optimization/
 ├── .gitignore
 │
 ├── Matlab/                          # Mechanistic electrolyzer model + training-data generation
-│   ├── channelmodel_full_Ag_Python.m   # Full 2D channel model (M3, Baghemihl) — CO/CO2 electrolysis
+│   ├── channelmodel_full_Ag_Python.m   # Full 2D channel model (M3, Bagemihl) — CO/CO2 electrolysis
 │   ├── M3_CO_wrapper.m                 # Wrapper: runs M3 for a given E_appl & inlet composition
 │   ├── Data.m                          # Physical parameters / constants for the channel model
 │   ├── DataGen.m                       # LHS / random sampling loop → training-data CSVs
@@ -167,8 +168,8 @@ co2-to-syngas-techno-economic-optimization/
 ## Core concepts
 
 ### Mechanistic electrolyzer model (`Matlab/`)
-The upstream, physics-based CO₂/CO channel electrolyzer model (M3, after
-Baghemihl): `channelmodel_full_Ag_Python.m` solves the coupled 2D
+The upstream, physics-based CO₂/CO channel electrolyzer model (M3, by
+Bagemihl et al. 2023, see [Credits](#credits)): `channelmodel_full_Ag_Python.m` solves the coupled 2D
 concentration field (method of lines) and catalyst-layer BVP (`bvp4c`) to
 return conversion, Faradaic efficiency, current density and pressure drop for a
 given applied potential and inlet composition. `M3_CO_wrapper.m` wraps a single
@@ -252,6 +253,32 @@ Configure the `SWEEP` block at the top; results land in
 
 ---
 
+## Credits
+
+The CO₂ electrolyzer modelling in this work builds directly on the work of
+**Isabell Bagemihl** (TU Delft):
+
+- The mechanistic **M3 full channel model** (`Matlab/channelmodel_full_Ag_Python.m`,
+  including `FLC_CL_BL`) and the cell-voltage equations used in the surrogate are
+  from Bagemihl et al., who also provide its CO₂-to-CO specification. In this work the
+  model is wrapped for surrogate training-data generation.
+  > I. Bagemihl, L. Cammann, M. Pérez-Fortes, V. van Steijn, J. R. van Ommen.
+  > *Techno-economic Assessment of CO₂ Electrolysis: How Interdependencies between
+  > Model Variables Propagate Across Different Modeling Scales.*
+  > ACS Sustainable Chemistry & Engineering 11(27), 10130–10141 (2023).
+  > [doi:10.1021/acssuschemeng.3c02226](https://doi.org/10.1021/acssuschemeng.3c02226)
+- Voltage calculations and electrolyzer cost data are adapted from her PhD thesis:
+  > I. Bagemihl. *Insights from operating under gas-liquid Taylor flow and
+  > techno-economic optimisation: Reactor design and economics of CO₂ electrolysers.*
+  > PhD thesis, Delft University of Technology (2024).
+  > [doi:10.4233/uuid:3bc3bb7e-03f4-4941-90b0-57747b14e5e8](https://doi.org/10.4233/uuid:3bc3bb7e-03f4-4941-90b0-57747b14e5e8)
+
+References for the separation models (Kim & Léonard 2025, Sees et al. 2021,
+Tjahjana 2025, Heßelmann et al. 2023) are given in each model file's header and
+in the thesis.
+
 ## License
 
-MIT for the author’s own code (see [`LICENSE`](LICENSE)). The mechanistic channel model in `Matlab/channelmodel_full_Ag_Python.m` (M3, after Baghemihl) is credited to its original authors.
+MIT for my own code (see [`LICENSE`](LICENSE)). The M3 channel model in
+`Matlab/channelmodel_full_Ag_Python.m` is the work of Bagemihl et al. (see
+[Credits](#credits)); all rights to it remain with its original authors.
